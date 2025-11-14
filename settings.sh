@@ -1,3 +1,4 @@
+
 # shellcheck shell=bash disable=2034
 
 # Packages to install
@@ -37,16 +38,11 @@ PACKAGES=(
 	gtk3 lib32-gtk3 vulkan-icd-loader lib32-vulkan-icd-loader
 	sdl2-compat lib32-sdl2-compat vkd3d lib32-vkd3d libgphoto2
 	openssl-1.1 lib32-openssl-1.1 libnm lib32-libnm
-	cabextract wget gamemode lib32-gamemode mangohud lib32-mangohud
+	cabextract wget mangohud lib32-mangohud
 	# development
-	base-devel git meson mingw-w64-gcc cmake
+	# base-devel git meson mingw-w64-gcc cmake
 	# gaming
 	lutris python-protobuf steam bottles
-	retroarch retroarch-assets-ozone libretro-beetle-psx-hw
-	libretro-blastem libretro-bsnes libretro-dolphin duckstation-gpl
-	libretro-gambatte libretro-melonds libretro-mgba libretro-nestopia
-	libretro-parallel-n64 libretro-picodrive libretro-ppsspp
-	libretro-yabause
 	# extra
 	# nano ttf-dejavu ttf-liberation firefox mpv geany pcmanfm
 	# htop qbittorrent speedcrunch gpicview file-roller openbox lxterminal
@@ -55,7 +51,7 @@ PACKAGES=(
 )
 
 # If you want to install AUR packages, specify them in this variable
-AUR_PACKAGES=(yay)
+AUR_PACKAGES=(yay-bin)
 
 # ALHP is a repository containing packages from the official Arch Linux
 # repos recompiled with -O3, LTO and optimizations for modern CPUs for
@@ -74,13 +70,15 @@ ALHP_FEATURE_LEVEL=4
 
 # Locales to configure in the image
 LOCALES=(
-	'en_US.UTF-8 UTF-8'
-	'ru_RU.UTF-8 UTF-8'
+        'en_US.UTF-8 UTF-8'
+        'ru_RU.UTF-8 UTF-8'
 )
 
 # Content of pacman mirrorrlist file before reflector is installed and used to fetch new one
 # shellcheck disable=2016
 MIRRORLIST='
+# Server = https://mirror.cspacehostings.com/archlinux/$repo/os/$arch
+# Server = https://berlin.mirror.pkgbuild.com/$repo/os/$arch
 Server = https://de.arch.mirror.kescher.at/$repo/os/$arch
 Server = https://europe.mirror.pkgbuild.com/$repo/os/$arch
 Server = https://at.arch.mirror.kescher.at/$repo/os/$arch
@@ -107,11 +105,11 @@ SQUASHFS_COMPRESSOR_ARGUMENTS=(-b 1M -comp "${SQUASHFS_COMPRESSOR}" -Xcompressio
 #SQUASHFS_COMPRESSOR_ARGUMENTS=(-b 256K -comp "${SQUASHFS_COMPRESSOR}" -Xhc)
 
 # Set to any value to Use DwarFS instead of SquashFS
-# USE_DWARFS=
-# DWARFS_COMPRESSOR_ARGUMENTS=(
-	# -l7 -C zstd:level=19 --metadata-compression null
-	# -S 22 -B 1 --order nilsimsa
-	# -W 12 -w 4 --no-history-timestamps --no-create-timestamp
+#USE_DWARFS=
+#DWARFS_COMPRESSOR_ARGUMENTS=(
+#	-l7 -C zstd:level=19 --metadata-compression null
+#	-S 22 -B 1 --order nilsimsa
+#	-W 12 -w 4 --no-history-timestamps --no-create-timestamp
 #)
 
 
@@ -119,11 +117,11 @@ SQUASHFS_COMPRESSOR_ARGUMENTS=(-b 1M -comp "${SQUASHFS_COMPRESSOR}" -Xcompressio
 # Conty will try to download each one of them sequentially
 BOOTSTRAP_DOWNLOAD_URLS=(
 	'https://arch.hu.fo/archlinux/iso/latest/archlinux-bootstrap-x86_64.tar.zst'
-	#'https://mirror.cyberbits.eu/archlinux/iso/latest/archlinux-bootstrap-x86_64.tar.zst'
-	#'https://mirror.osbeck.com/archlinux/iso/latest/archlinux-bootstrap-x86_64.tar.zst'
-	#'https://mirror.lcarilla.de/archlinux/iso/latest/archlinux-bootstrap-x86_64.tar.zst'
-	#'https://mirror.moson.org/archlinux/iso/latest/archlinux-bootstrap-x86_64.tar.zst'
-	#'https://mirror.f4st.host/archlinux/iso/latest/archlinux-bootstrap-x86_64.tar.zst'
+	'https://mirror.cyberbits.eu/archlinux/iso/latest/archlinux-bootstrap-x86_64.tar.zst'
+	'https://mirror.osbeck.com/archlinux/iso/latest/archlinux-bootstrap-x86_64.tar.zst'
+	'https://mirror.lcarilla.de/archlinux/iso/latest/archlinux-bootstrap-x86_64.tar.zst'
+	'https://mirror.moson.org/archlinux/iso/latest/archlinux-bootstrap-x86_64.tar.zst'
+	'https://mirror.f4st.host/archlinux/iso/latest/archlinux-bootstrap-x86_64.tar'
 )
 
 # sha256sums.txt file to verify downloaded bootstrap archive with
