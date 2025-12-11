@@ -21,7 +21,7 @@ PACKAGES=(
 	intel-media-driver mesa-utils vulkan-tools libva-utils lib32-mesa-utils
 
 	# wine
-        # winetricks-git 
+    # winetricks-git 
 	wine-staging winetricks wine-nine wineasio
 	freetype2 lib32-freetype2 libxft lib32-libxft
 	flex lib32-flex fluidsynth lib32-fluidsynth
@@ -43,13 +43,13 @@ PACKAGES=(
 	sdl2-compat lib32-sdl2-compat vkd3d lib32-vkd3d libgphoto2
 	openssl-1.1 lib32-openssl-1.1 libnm lib32-libnm
 	cabextract wget gamemode lib32-gamemode mangohud lib32-mangohud
-        goverlay
+    goverlay
 
 	# development
 	# base-devel git meson mingw-w64-gcc cmake
 
 	# gaming
-        lutris python-protobuf steam bottles
+    lutris python-protobuf steam bottles
 	# lutris python-protobuf steam steamtinkerlaunch
 	# minigalaxy gamehub legendary prismlauncher bottles playonlinux obs-studio
 	# retroarch retroarch-assets-ozone libretro-beetle-psx-hw
@@ -59,7 +59,7 @@ PACKAGES=(
 	# libretro-yabause pcsx2-git lsfg-vk-git
 
 	# extra
-        gnome-themes-extra
+    gnome-themes-extra
 	# nano ttf-dejavu ttf-liberation firefox mpv geany pcmanfm
 	# htop qbittorrent speedcrunch gpicview file-roller openbox lxterminal
 	# yt-dlp minizip nautilus genymotion jre17-openjdk gnome-themes-extra
