@@ -77,12 +77,12 @@ AUR_PACKAGES=(yay-bin mangojuice-bin faugus-launcher-git)
 # Arch Linux repos will be replaced with their optimized versions from ALHP
 #
 # Set this variable to any value if you want to enable this repository
-ENABLE_ALHP_REPO=1
+ENABLE_ALHP_REPO=
 
 # Feature levels for ALHP. Available feature levels are 2 and 3
 # For level 2 you need a CPU with SSE4.2 instructions
 # For level 3 you need a CPU with AVX2 instructions
-ALHP_FEATURE_LEVEL=4
+ALHP_FEATURE_LEVEL=
 
 # Locales to configure in the image
 LOCALES=(
